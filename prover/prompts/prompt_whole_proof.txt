@@ -1,0 +1,15 @@
+LIBRARY (available lemmas and tactics):
+{library_summary}
+
+THEOREM TO PROVE:
+```coq
+{theorem}
+```
+
+PEN-AND-PAPER PROOF:
+{pap_proof}
+
+{error_block}
+Write the COMPLETE Coq proof from `Proof.` to `Qed.` in a ```coq block.
+One tactic per line, ending with a period. Bullets on their own line.
+Do NOT output goal states, expressions, or commentary as tactic lines.

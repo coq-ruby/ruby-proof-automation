@@ -1,0 +1,16 @@
+{
+  "models": [
+    {"id": "gpt-6-astra", "label": "GPT-6 Astra", "provider": "openai", "effort": "medium", "max_output": 128000},
+    {"id": "gpt-6.1-sol", "label": "GPT-6.1 Sol", "provider": "openai", "effort": "medium", "max_output": 128000},
+    {"id": "gpt-6-luna", "label": "GPT-6 Luna", "provider": "openai", "effort": "medium", "max_output": 128000},
+    {"id": "gpt-5.6-sol", "label": "GPT-5.6 Sol", "provider": "openai", "effort": "medium", "max_output": 128000},
+    {"id": "gpt-5.4-2026-03-05", "label": "GPT-5.4", "provider": "openai", "effort": "medium", "max_output": 128000},
+    {"id": "o3-2025-04-16", "label": "o3", "provider": "openai", "effort": "medium", "max_output": 100000},
+    {"id": "gpt-4.1-2025-04-14", "label": "GPT-4.1", "provider": "openai", "effort": null, "max_output": 32768},
+    {"id": "claude-opus-5-5", "label": "Claude Opus 5.5", "provider": "anthropic", "thinking": "adaptive", "effort": "medium", "max_output": 128000},
+    {"id": "claude-sonnet-5-5", "label": "Claude Sonnet 5.5", "provider": "anthropic", "thinking": "adaptive", "effort": "medium", "max_output": 128000},
+    {"id": "claude-opus-4-6", "label": "Claude Opus 4.6 (plain)", "provider": "anthropic", "thinking": "off", "effort": null, "max_output": 128000},
+    {"id": "claude-opus-4-5-20251101", "label": "Claude Opus 4.5", "provider": "anthropic", "thinking": "manual", "thinking_budget": 10000, "effort": "medium", "max_output": 64000},
+    {"id": "gemini-3.1-pro-preview", "label": "Gemini 3.1 Pro", "provider": "google", "effort": "high", "max_output": 65536}
+  ]
+}

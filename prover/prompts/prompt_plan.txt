@@ -1,0 +1,29 @@
+LIBRARY (available lemmas and tactics):
+{library_summary}
+
+THEOREM:
+```coq
+{theorem}
+```
+
+PEN-AND-PAPER PROOF:
+{pap_proof}
+
+Break this proof into a sequence of SEGMENTS. Each segment corresponds to
+one algebraic step (or a small group of closely related steps) from the
+pen-and-paper proof.
+
+For each segment, provide:
+  - A short label
+  - The relevant excerpt from the pen-and-paper proof
+  - A description of what the Coq goal should look like AFTER this segment
+
+Output format (use exactly this structure):
+
+SEGMENT <label>:
+  pap: <excerpt from the pen-and-paper proof>
+  after: <description of the expected Coq goal after this segment completes>
+
+Include segments for setup (intros, induction), the base case, and
+each step of the inductive case. The base case should be ONE segment.
+Each algebraic step in the inductive case should be its own segment.

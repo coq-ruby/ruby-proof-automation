@@ -1,0 +1,15 @@
+runs/
+.venv/
+.env
+.env.*
+*.key
+*.pem
+__pycache__/
+*.py[cod]
+*.vo
+*.vos
+*.vok
+*.glob
+.*.aux
+.lia.cache
+.nia.cache

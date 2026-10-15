@@ -1,0 +1,124 @@
+{
+  "tasks": {
+    "preHorners": {
+      "context": "Require Export rec loop.\n",
+      "modules": [
+        "library/core/axioms.v",
+        "library/core/rel.v",
+        "library/core/basic.v",
+        "library/core/wire.v",
+        "library/core/loop.v",
+        "library/core/rec.v"
+      ]
+    },
+    "Horners": {
+      "context": "Require Export rec loop.\nRequire Import preHorners_prerequisite.\n",
+      "modules": [
+        "library/core/axioms.v",
+        "library/core/rel.v",
+        "library/core/basic.v",
+        "library/core/wire.v",
+        "library/core/loop.v",
+        "library/core/rec.v"
+      ]
+    },
+    "interchange_2x2": {
+      "context": "Require Import grid_components.\n",
+      "modules": [
+        "library/core/axioms.v",
+        "library/core/rel.v",
+        "library/core/basic.v",
+        "library/core/wire.v",
+        "library/core/grid_components.v"
+      ]
+    },
+    "monitor": {
+      "context": "Require Import monitor_prerequisites.\nRequire Import Arith Lia.\nSection Task.\nLocal Open Scope nat_scope.\nVariable A : Type.\nVariable D : rel A A.\nVariable R : rel (A*A) A.\nHypothesis D_c2 : D^~1 ; D = id A.\nHypothesis Hpush : [D,D] ; R = R ; D.\nHypothesis Hassoc : rsh ; FST R ; R = SND R ; R.\nHypothesis Rdet : det R.\nLocal Notation P := (P A D R).\nLocal Notation Q := (Q A D R).\nLocal Notation PP := (PP A D R).\n\n",
+      "modules": [
+        "library/core/axioms.v",
+        "library/core/rel.v",
+        "library/core/basic.v",
+        "library/core/wire.v",
+        "library/core/rec.v",
+        "library/core/monitor_prerequisites.v"
+      ]
+    },
+    "contour_row": {
+      "context": "Require Import equational_helpers.\n\n",
+      "modules": [
+        "library/core/axioms.v",
+        "library/core/rel.v",
+        "library/core/basic.v",
+        "library/contour/wire.v",
+        "library/contour/wire_rec.v",
+        "library/contour/rec.v",
+        "library/contour/twod.v",
+        "library/contour/contour_prerequisites.v",
+        "library/contour/equational_helpers.v"
+      ]
+    },
+    "contour_right": {
+      "context": "Require Import grid_support.\n\n",
+      "modules": [
+        "library/core/axioms.v",
+        "library/core/rel.v",
+        "library/core/basic.v",
+        "library/contour/wire.v",
+        "library/contour/wire_rec.v",
+        "library/contour/rec.v",
+        "library/grid/twod.v",
+        "library/contour/contour_prerequisites.v",
+        "library/grid/grid_helpers.v",
+        "library/contour/equational_helpers.v",
+        "library/grid/grid_support.v"
+      ]
+    }
+  },
+  "sha256": {
+    "benchmarks/Horners/formalisation.md": "af0cd3adeff5b0b6c6ba62ebeead7e91bf8c6d86089ecc44cd91d9d9ab60f7a0",
+    "benchmarks/Horners/library_interface.v": "10f344951faaab6365cd6aa6caf183ae7dbbd94ee254a3faec71984a48ece6f8",
+    "benchmarks/Horners/paper_proof.md": "0d191afc57436732fe4783b179c36a0ed179f68bc0fac5e47235b5448d2af8b2",
+    "benchmarks/Horners/target.v": "baccec93c437929183a8d34786fd188f91c558ee5b271854cd1961019e31da18",
+    "benchmarks/contour_right/formalisation.md": "4cd1c5cdc71f4b4eeb32b6c49a649d88abe278492f41203172196c6f56f33582",
+    "benchmarks/contour_right/library_interface.v": "74e06ba2d6b3cfea980640dafde6c66046aa51290e18199777598b711e83b547",
+    "benchmarks/contour_right/paper_proof.md": "2c839fee8e7c7e5094eed358d981d9604ec7978d3928f0a88f8e51146bf77360",
+    "benchmarks/contour_right/target.v": "2a515f65d033af8b62cab1d30fc53e906423d17c51472810392a116ca2090e24",
+    "benchmarks/contour_row/formalisation.md": "a245757ffa56ec7965afb737f0dd17df335d7c866fcfd3eec33e1fb2f8ae0673",
+    "benchmarks/contour_row/library_interface.v": "0fb2f93a8b1bc1bf436fb957f1b55c867e4bf72e85857c7ef89adac6656972b4",
+    "benchmarks/contour_row/paper_proof.md": "0853899f49d4077084a98835b57d101c1140fde8ff485aaf5908465fc1ecd40b",
+    "benchmarks/contour_row/target.v": "ec1787fe691d0b52ffe6cbc66883fe48b92e19c8b68770580ca8a54ee983a61a",
+    "benchmarks/interchange_2x2/formalisation.md": "4dac492fa11d9e072df1c5cec81e065bc3131ec30bfcfb2622a8b46d4c31b134",
+    "benchmarks/interchange_2x2/library_interface.v": "728a4f1fb6bc69a4d7c580c20fd89f9c8c5aa620d4686815e500a59015310754",
+    "benchmarks/interchange_2x2/paper_proof.md": "241274f6cf0299e0b93e05dbe9714df6f443704710de40f5190b5f46c495c35a",
+    "benchmarks/interchange_2x2/target.v": "812ef51cbc84aa59c6e5624042ddd0fb60ed2c18fff5e4696659e12c5de5e53e",
+    "benchmarks/library.md": "bc3c45c551aee6b34b86db58aac5cf081dace8c48bed3de6de85e4eb9e0d03f5",
+    "benchmarks/monitor/formalisation.md": "28d62d87f7abaa8b10b711896b1cdd16dfb07dd0f599323228c9d2f4b5f97081",
+    "benchmarks/monitor/library_interface.v": "239a01a85f3949b9dfa9eaf4449740a953f753cc379f3be4385cba440a4a538c",
+    "benchmarks/monitor/paper_proof.md": "844d16534de639a5c085261626b7bfa0d46d0ead636162b78cd2acfb016038e8",
+    "benchmarks/monitor/target.v": "7e2cb5bea00965ca233a17be8305e8f1ed5ca9e4525a6549ad5a0a0bb45026e9",
+    "benchmarks/preHorners/formalisation.md": "342ac6014112cc89993442ec69779c1162ae442f3b631d82bf5c3ec1cc55e56d",
+    "benchmarks/preHorners/library_interface.v": "b1209eb5d472fd54ea9cdb02bc880c98730f8795c21fb519a7e1900ee7258267",
+    "benchmarks/preHorners/paper_proof.md": "abb6f822f67adb6e383766b395846e91241edadb9efddfdd5104e73c83f392e9",
+    "benchmarks/preHorners/target.v": "7fdab9ebb4ab4622cb4427bcaaf54de7bb86ec22ce70f1347848c78b41cb7895",
+    "benchmarks/system.txt": "78d08a0e2417e286eb6c9c97ab9eadde32201c980075601a48c5b6a09af0b379",
+    "library/contour/contour_prerequisites.v": "440378572d9ecf4b4ad66c3a8c241f8de3df7092e1b98289ea0f5cc157d8a7a1",
+    "library/contour/equational_helpers.v": "316da38aca7c8e5ea2606e05d185a45cb9b2b40a29ec61ec18a5758473ab8ba9",
+    "library/contour/rec.v": "831c0641d30b6190c5ba54531ef0b5227fcf3eea1c28ea4d1366a090f51f76dc",
+    "library/contour/twod.v": "431e64c98d37fd6aa661664f78a3149edd5ebc55c996041410493aa4170b28e4",
+    "library/contour/wire.v": "e617dc401627e3af3f8cbf8a7cc87e404710634231e96cb677fbe1f7dfd7da92",
+    "library/contour/wire_rec.v": "2801e895acea2a575b5a527b111c3f07ea431a76f8818cc379a1c4378eaafd6f",
+    "library/core/axioms.v": "23742bfb866bfc8e6b2890b54ce1a005549065725961b7e5c5a5179cc8b82f1a",
+    "library/core/basic.v": "c6c8d825ffd2518bb93ebaed4296612ef422649e2d5764712cff24a8ad054495",
+    "library/core/grid_components.v": "ee215765d30877adc94518bebefc74747b152ce636165af590316fab9d8e0c7d",
+    "library/core/loop.v": "4895a54d11dcd3c1f37b7ddc4228d9cb0c096c1f12fafd1c7a37a1d2ea62946a",
+    "library/core/monitor_prerequisites.v": "ffdaf9bf4ad856cabd203320d0f29949058a1f05792e158800946800dca0efb2",
+    "library/core/rec.v": "6f7743fdc804c99db78c3eb244b26679587bc1a6f4df58eb95d0f045a17ca4b4",
+    "library/core/rel.v": "04ce58f47a94e5d5b62bdf577e7dd3bb566660781dc0303f485758457e1a11b8",
+    "library/core/wire.v": "44bcf2bfcdc38976136abedd6eeb64f93eedeb9e3bd2faa3f33b65492b235b7d",
+    "library/grid/grid_helpers.v": "2235b62717f181920427e62d0dc6558133aa70cdf3fad677b0d534e5076999ba",
+    "library/grid/grid_support.v": "6e0894a90c27a24a678f065f96bfc6593f4e02b778b70e85d711111c035dfb9e",
+    "library/grid/twod.v": "c99005630954dc0a35f8490a474eb43c11dfee4983c735f2139b7a3604d5bda7",
+    "prover/prompts/prompt_plan.txt": "cd52ed51fe26c5a9440cfd390e61f8d4f11d9a5e8fa6c50e48c79ede42c3366c",
+    "prover/prompts/prompt_whole_proof.txt": "0ee93f68a297d13cbe270d3519b84b8fb7db24747810019dde482f95d7b1e275"
+  }
+}
